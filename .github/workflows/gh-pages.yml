@@ -17,9 +17,7 @@ jobs:
       run: |
         git config --global user.email "git@cmsz.us.kg"  # 设置git用户email
         git config --global user.name "CMSZ"  # 设置git用户名
-        # git checkout master
-        cd ..
-        pwd
-        ls
-        # git merge gh-pages
-        
+        git checkout gh-pages  # 切换到gh-pages分支
+        rm -rf *  # 清空gh-pages分支的文件
+        git merge master
+        git push
