@@ -9,14 +9,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest  # 运行在最新的Ubuntu虚拟机上
     steps:
-    - uses: actions/checkout@v2  # 检出代码
+    - uses: actions/checkout@v4  # 检出代码
 
     - name: Deploy to GitHub Pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用GitHub提供的token
       run: |
-        git config --global user.email "your-email@example.com"  # 设置git用户email
-        git config --global user.name "Your Name"  # 设置git用户名
+        git config --global user.email "git@cmsz.us.kg"  # 设置git用户email
+        git config --global user.name "CMSZ"  # 设置git用户名
         git checkout gh-pages  # 切换到gh-pages分支
         rm -rf *  # 清空gh-pages分支的文件
         git checkout master -- .nojekyll  # 从master分支检出.nojekyll文件（如果有的话）
