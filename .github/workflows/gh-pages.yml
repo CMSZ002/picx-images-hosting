@@ -18,6 +18,7 @@ jobs:
         git config --global user.email "git@cmsz.us.kg"  # 设置git用户email
         git config --global user.name "CMSZ"  # 设置git用户名
         # git checkout master
+        pwd
         ls
         # git merge gh-pages
         
