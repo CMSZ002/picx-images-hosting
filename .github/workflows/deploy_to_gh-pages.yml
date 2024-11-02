@@ -17,10 +17,6 @@ jobs:
       run: |
         git config --global user.email "git@cmsz.us.kg"  # 设置git用户email
         git config --global user.name "CMSZ"  # 设置git用户名
-        git checkout gh-pages  # 切换到gh-pages分支
-        rm -rf *  # 清空gh-pages分支的文件
-        git checkout master -- .nojekyll  # 从master分支检出.nojekyll文件（如果有的话）
-        cp -r master/* .  # 将master分支的内容复制到gh-pages分支
-        git add .  # 添加所有文件到git
-        git commit -m "Update GitHub Pages"  # 提交更改
-        git push origin gh-pages --force  # 强制推送到gh-pages分支
+        git checkout master
+        git merge gh-pages
+        
